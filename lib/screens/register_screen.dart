@@ -30,38 +30,78 @@ class RegisterScreen extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             ElevatedButton(
+              child: const Text('Register'),
               onPressed: () {
                 final name = _nameController.text.trim();
                 final email = _emailController.text.trim();
                 final password = _passwordController.text;
 
-                if (name.isNotEmpty &&
-                    email.isNotEmpty &&
-                    password.isNotEmpty) {
-                  // Adiciona o usuário à lista global
-                  registeredUsers.add({
-                    'name': name,
-                    'email': email,
-                    'password': password,
-                  });
-
+                print(registeredUsers);
+                bool usuarioJaCadastrado = false;
+                for (var element in registeredUsers) {
+                  if (element['email'] == _emailController.text) {
+                    usuarioJaCadastrado = true;
+                  }
+                }
+                print('usuarioNaoCadastrado==> $usuarioJaCadastrado');
+                if (usuarioJaCadastrado) {
                   ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(
-                        content: Text('User $name registered successfully!')),
-                  );
-
-                  Navigator.pop(context); // Volta para a tela anterior
-                } else {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(content: Text('Please fill all fields')),
+                    const SnackBar(
+                      elevation: 10.0,
+                      backgroundColor: Colors.red,
+                      content: Text(
+                        'EMAIL JA CADASTRADO !!!',
+                        textAlign: TextAlign.center,
+                      ),
+                      duration: Duration(seconds: 3),
+                    ),
                   );
                 }
+
+                if (!usuarioJaCadastrado) {
+                  if (name.isNotEmpty &&
+                      email.isNotEmpty &&
+                      password.isNotEmpty) {
+                    // Adiciona o usuário à lista global
+                    registeredUsers.add({
+                      'name': name,
+                      'email': email,
+                      'password': password,
+                    });
+
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        content: Text(
+                          'User $name registered successfully!',
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                    );
+
+                    Navigator.pop(context); // Volta para a tela anterior
+                  } else {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(
+                        content: Text(
+                          'Please fill all fields',
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                    );
+                  }
+                }
+                _limpaControllers();
               },
-              child: const Text('Register'),
             ),
           ],
         ),
       ),
     );
+  }
+
+  _limpaControllers() {
+    _emailController.clear();
+    _nameController.clear();
+    _passwordController.clear();
   }
 }
