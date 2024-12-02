@@ -13,7 +13,7 @@ Projeto em Flutter.
 ## Demonstração do Projeto
 
 <div align="center">
-  <img src="assets/ScreenRecorderProject7.gif" alt="Demonstração do Projeto" width="600">
+  <img src="assets/ScreenRecorderProject7.gif" alt="Demonstração do Projeto" width="300">
 </div>
 
 ## Capturas de Tela
