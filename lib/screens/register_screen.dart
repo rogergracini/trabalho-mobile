@@ -9,7 +9,7 @@ class RegisterScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Register User')),
+      appBar: AppBar(title: const Text('Registro de Usuário')),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -17,7 +17,7 @@ class RegisterScreen extends StatelessWidget {
           children: [
             TextField(
               controller: _nameController,
-              decoration: const InputDecoration(labelText: 'Name'),
+              decoration: const InputDecoration(labelText: 'Nome'),
             ),
             TextField(
               controller: _emailController,
@@ -25,12 +25,12 @@ class RegisterScreen extends StatelessWidget {
             ),
             TextField(
               controller: _passwordController,
-              decoration: const InputDecoration(labelText: 'Password'),
+              decoration: const InputDecoration(labelText: 'Senha'),
               obscureText: true,
             ),
             const SizedBox(height: 20),
             ElevatedButton(
-              child: const Text('Register'),
+              child: const Text('Se Registrar'),
               onPressed: () {
                 final name = _nameController.text.trim();
                 final email = _emailController.text.trim();

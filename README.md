@@ -1,16 +1,31 @@
-# user_management_app
+# Trabalho da matéria Mobile Development
 
-A new Flutter project.
+Projeto em Flutter.
 
-## Getting Started
+## Sobre o projeto
 
-This project is a starting point for a Flutter application.
+## Demostração do projeto
 
-A few resources to get you started if this is your first Flutter project:
+![Vídeos das Telas](assets/ScreenRecorderProject7.gif)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Capturas de Tela
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Tela Login
+![Tela de Login](assets/tela_de_login.png)
+
+### Tela Registro Usuário
+![Tela de Registro de Usuário](assets/tela_de_registro_de_usuarios.png)
+
+### Tela Usuário
+![Tela de de Usuário](assets/tela_de_usuario.png)
+
+
+## Começando
+
+Este projeto é um ponto de partida para uma aplicação Flutter.
+
+Alguns recursos para você começar se este for seu primeiro projeto Flutter:
+
+Laboratório: Escreva seu primeiro aplicativo Flutter
+Livro de receitas: exemplos úteis do Flutter
+Para obter ajuda para começar a desenvolver o Flutter, consulte o documentação online, que oferece tutoriais, exemplos, orientações sobre desenvolvimento móvel e uma referência completa da API.
