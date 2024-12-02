@@ -3,11 +3,11 @@
 Projeto em Flutter.
 
 ## Sobre o projeto
-1- Ao rodar o projeto vamos diretamente para a tela de login
-2- Para se logar é necessário o registro do mesmo
-3- Após se registrar o usuario poderá se logar normalmente
-4- Na tela de usuario aparecerá os usuarios cadastrados e nessa tela ele poderão ser deletados
-5- Se não tiver email, senha corretamente preenchidos mostramos uma mensagem de erro
+1- Ao rodar o projeto vamos diretamente para a tela de login<br>
+2- Para se logar é necessário o registro do mesmo<br>
+3- Após se registrar o usuario poderá se logar normalmente<br>
+4- Na tela de usuario aparecerá os usuarios cadastrados e nessa tela ele poderão ser deletados<br>
+5- Se não tiver email, senha corretamente preenchidos mostramos uma mensagem de erro<br>
 6- Ao se registrar mostramos mensagem de sucesso 
 
 ## Demostração do projeto
