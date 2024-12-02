@@ -1,9 +1,14 @@
 # Trabalho da matéria Mobile Development
 
-<<<<<<< HEAD
 Projeto em Flutter.
 
 ## Sobre o projeto
+1- Ao rodar o projeto vamos diretamente para a tela de login
+2- Para se logar é necessário o registro do mesmo
+3- Após se registrar o usuario poderá se logar normalmente
+4- Na tela de usuario aparecerá os usuarios cadastrados e nessa tela ele poderão ser deletados
+5- Se não tiver email, senha corretamente preenchidos mostramos uma mensagem de erro
+6- Ao se registrar mostramos mensagem de sucesso 
 
 ## Demostração do projeto
 
@@ -30,22 +35,3 @@ Alguns recursos para você começar se este for seu primeiro projeto Flutter:
 Laboratório: Escreva seu primeiro aplicativo Flutter
 Livro de receitas: exemplos úteis do Flutter
 Para obter ajuda para começar a desenvolver o Flutter, consulte o documentação online, que oferece tutoriais, exemplos, orientações sobre desenvolvimento móvel e uma referência completa da API.
-=======
-Projeto em  Flutter.
-
-## Sobre o projeto
-
-
-### Começando
-
-Este projeto é um ponto de partida para uma aplicação Flutter.
-
-Alguns recursos para você começar se este for seu primeiro projeto Flutter:
-
-- [Laboratório: Escreva seu primeiro aplicativo Flutter](https://docs.flutter.dev/get-started/codelab)
-- [Livro de receitas: exemplos úteis do Flutter](https://docs.flutter.dev/cookbook)
-
-Para obter ajuda para começar a desenvolver o Flutter, consulte o
-[documentação online](https://docs.flutter.dev/), que oferece tutoriais,
-exemplos, orientações sobre desenvolvimento móvel e uma referência completa da API.
->>>>>>> f51d3a314d27ea5115a5eb07aa9abcf6917f2a65
