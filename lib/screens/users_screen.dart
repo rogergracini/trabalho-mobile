@@ -5,8 +5,7 @@ class UsersScreen extends StatefulWidget {
   const UsersScreen({super.key});
 
   @override
-  UsersScreenState createState() =>
-      UsersScreenState(); // Classe de estado pública
+  UsersScreenState createState() => UsersScreenState(); // Classe de estado pública
 }
 
 class UsersScreenState extends State<UsersScreen> {
@@ -19,11 +18,19 @@ class UsersScreenState extends State<UsersScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Usuários')),
+      appBar: AppBar(
+        title: const Text('Usuários'),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.list),
+            onPressed: () {
+              Navigator.pushNamed(context, '/roles'); // Use Navigator diretamente
+            },
+          ),
+        ],
+      ),
       body: registeredUsers.isEmpty
-          ? const Center(
-              child: Text('No users registered'),
-            )
+          ? const Center(child: Text('No users registered'))
           : ListView.builder(
               itemCount: registeredUsers.length,
               itemBuilder: (context, index) {
@@ -38,6 +45,12 @@ class UsersScreenState extends State<UsersScreen> {
                 );
               },
             ),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.add),
+        onPressed: () {
+          Navigator.pushNamed(context, '/register');
+        },
+      ),
     );
   }
 }
