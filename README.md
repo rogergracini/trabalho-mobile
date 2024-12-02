@@ -22,15 +22,15 @@ Projeto em Flutter.
   <table>
     <tr>
       <td align="center">
-        <img src="assets/tela_de_login.png" alt="Tela Login" width="150">
+        <img src="assets/tela_de_login.png" alt="Tela Login" width="160">
         <br><b>Tela Login</b>
       </td>
       <td align="center">
-        <img src="assets/tela_de_registro_de_usuarios.png" alt="Tela Registro Usuário" width="150">
+        <img src="assets/tela_de_registro_de_usuarios.png" alt="Tela Registro Usuário" width="160">
         <br><b>Tela Registro Usuário</b>
       </td>
       <td align="center">
-        <img src="assets/tela_de_usuario.png" alt="Tela Usuário" width="150">
+        <img src="assets/tela_de_usuario.png" alt="Tela Usuário" width="160">
         <br><b>Tela Usuário</b>
       </td>
     </tr>
