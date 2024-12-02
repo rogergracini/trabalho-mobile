@@ -10,9 +10,11 @@ Projeto em Flutter.
 5- Se não tiver email, senha corretamente preenchidos mostramos uma mensagem de erro<br>
 6- Ao se registrar mostramos mensagem de sucesso 
 
-## Demostração do projeto
+## Demonstração do Projeto
 
-![Vídeos das Telas](assets/ScreenRecorderProject7.gif)
+<div align="center">
+  <img src="assets/ScreenRecorderProject7.gif" alt="Demonstração do Projeto" width="600">
+</div>
 
 ## Capturas de Tela
 
