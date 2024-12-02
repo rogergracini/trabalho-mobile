@@ -16,14 +16,24 @@ Projeto em Flutter.
 
 ## Capturas de Tela
 
-### Tela Login
-![Tela de Login](assets/tela_de_login.png)
-
-### Tela Registro Usuário
-![Tela de Registro de Usuário](assets/tela_de_registro_de_usuarios.png)
-
-### Tela Usuário
-![Tela de de Usuário](assets/tela_de_usuario.png)
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="assets/tela_de_login.png" alt="Tela Login" width="150">
+        <br><b>Tela Login</b>
+      </td>
+      <td align="center">
+        <img src="assets/tela_de_registro_de_usuarios.png" alt="Tela Registro Usuário" width="150">
+        <br><b>Tela Registro Usuário</b>
+      </td>
+      <td align="center">
+        <img src="assets/tela_de_usuario.png" alt="Tela Usuário" width="150">
+        <br><b>Tela Usuário</b>
+      </td>
+    </tr>
+  </table>
+</div>
 
 
 ## Começando
