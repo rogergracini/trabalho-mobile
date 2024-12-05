@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'User Management App',
+      title: 'Pet Conecta',
       theme: ThemeData(primarySwatch: Colors.blue), // Use uma cor MaterialColor aqui
       initialRoute: '/login',
       routes: {

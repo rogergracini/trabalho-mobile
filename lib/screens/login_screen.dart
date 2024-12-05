@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:user_management_app/main.dart';
+import '../main.dart'; // Certifique-se de importar o arquivo correto onde está a lista registeredUsers
 
 class LoginScreen extends StatelessWidget {
   final TextEditingController _emailController = TextEditingController();
@@ -11,64 +11,55 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     _limpaControllers();
     return Scaffold(
-      appBar: AppBar(title: const Text('Tela de Login')),
+      appBar: AppBar(
+        title: const Text('Tela de Login'),
+        backgroundColor: Colors.orange, // Define a cor de fundo da AppBar
+      ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            const SizedBox(height: 250), // Espaço entre o título e o primeiro campo
             TextField(
               controller: _emailController,
-              decoration: const InputDecoration(labelText: 'Email'),
+              decoration: const InputDecoration(
+                labelText: 'Email',
+                border: OutlineInputBorder(), // Adiciona borda ao campo
+                contentPadding: EdgeInsets.all(12), // Espaçamento interno
+              ),
+              keyboardType: TextInputType.emailAddress,
             ),
+            const SizedBox(height: 20), // Espaço entre os campos
             TextField(
               controller: _passwordController,
-              decoration: const InputDecoration(labelText: 'Senha'),
+              decoration: const InputDecoration(
+                labelText: 'Senha',
+                border: OutlineInputBorder(), // Adiciona borda ao campo
+                contentPadding: EdgeInsets.all(12), // Espaçamento interno
+              ),
               obscureText: true,
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 30), // Espaço maior antes do botão
             ElevatedButton(
               onPressed: () {
-                print(registeredUsers);
-                // bool registroCompleto = true;
+                final email = _emailController.text.trim();
+                final password = _passwordController.text.trim();
 
-                bool emailExiste = false;
-                bool senhaCorreta = false;
+                // Verifica se o usuário existe
+                final user = registeredUsers.firstWhere(
+                  (element) => element['email'] == email,
+                  orElse: () => {},
+                );
 
-                for (var element in registeredUsers) {
-                  if (element['email'] == _emailController.text) {
-                    emailExiste = true;
+                if (user.isNotEmpty) {
+                  if (user['password'] == password) {
+                    Navigator.pushNamed(context, '/users');
+                  } else {
+                    _exibirMensagem(context, 'SENHA INCORRETA');
                   }
-                }
-                for (var element in registeredUsers) {
-                  if (element['password'] == _passwordController.text) {
-                    senhaCorreta = true;
-                  }
-                }
-
-                if (emailExiste == true && senhaCorreta == true) {
-                  Navigator.pushNamed(context, '/users');
-                }
-                if (emailExiste == true && senhaCorreta == false) {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(
-                      content: Text(
-                        'SENHA INCORRETA',
-                        textAlign: TextAlign.center,
-                      ),
-                      duration: Duration(seconds: 3),
-                    ),
-                  );
-                }
-                if (emailExiste == false) {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(
-                      content: Text(
-                        'USUARIO NÃO EXISTE',
-                        textAlign: TextAlign.center,
-                      ),
-                      duration: Duration(seconds: 3),
-                    ),
-                  );
+                } else {
+                  _exibirMensagem(context, 'USUÁRIO NÃO EXISTE');
                   _limpaControllers();
                 }
               },
@@ -86,8 +77,20 @@ class LoginScreen extends StatelessWidget {
     );
   }
 
-  _limpaControllers() {
+  void _limpaControllers() {
     _emailController.clear();
     _passwordController.clear();
+  }
+
+  void _exibirMensagem(BuildContext context, String mensagem) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(
+          mensagem,
+          textAlign: TextAlign.center,
+        ),
+        duration: const Duration(seconds: 3),
+      ),
+    );
   }
 }
